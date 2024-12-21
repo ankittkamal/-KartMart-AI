@@ -6,8 +6,9 @@ import org.kartmart.ai.entity.Category;
 import java.util.List;
 
 public interface CategoryService {
-    List<Category> getAllCategories();
-    Category getCategoryById(int id);
-    void createCategory(CategoryDTO categoryDTO);
-    String deleteCategoryById(Long id);
+    CategoryDTO createCategory(CategoryDTO categoryDTO);
+    List<CategoryDTO> getAllCategories();
+    CategoryDTO getCategoryById(Long id);
+    CategoryDTO updateCategory(CategoryDTO categoryDTO, Long id);
+    void deleteCategoryById(Long id);
 }
